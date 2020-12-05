@@ -13,7 +13,7 @@ public class Prospector : MonoBehaviour {
 	public TextAsset deckXML;
 	public TextAsset layoutXML;
 	public float xOffset = 3;
-	public float yOffset = -2.5f;
+	public float yOffset = -2.5f; 
 	public Vector3 layoutCenter;
 	public Vector2 fsPosMid = new Vector2(0.5f, 0.90f);
 	public Vector2 fsPosRun = new Vector2(0.5f, 0.75f);
