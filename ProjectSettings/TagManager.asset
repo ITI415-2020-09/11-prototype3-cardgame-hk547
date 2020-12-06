@@ -54,17 +54,11 @@ TagManager:
     uniqueID: 1999001117
     locked: 0
   - name: Row4
-    uniqueID: 1621687915
-    locked: 0
-  - name: Row5
-    uniqueID: 1523737147
-    locked: 0
-  - name: Row6
-    uniqueID: 2858919783
-    locked: 0
-  - name: Discard
     uniqueID: 2886981661
     locked: 0
-  - name: Draw
+  - name: Discard
     uniqueID: 1560594663
+    locked: 0
+  - name: Draw
+    uniqueID: 3011198769
     locked: 0

@@ -141,7 +141,7 @@ public class Deck : MonoBehaviour {
 	public void MakeCards() {
 		// stub Add the code from page 577 here
 		cardNames = new List<string>();
-		string[] letters = new string[] {"C","D","H","S"};
+		string[] letters = new string[] {"H","H","H","H"};
 		foreach (string s in letters) {
 			for (int i =0; i<13; i++) {
 				cardNames.Add(s+(i+1));
@@ -168,8 +168,8 @@ public class Deck : MonoBehaviour {
 			card.rank = int.Parse (card.name.Substring (1));
 			
 			if (card.suit =="D" || card.suit == "H") {
-				card.colS = "Red";
-				card.color = Color.red;
+				card.colS = "magenta";
+				card.color = Color.magenta;
 			}
 			
 			card.def = GetCardDefinitionByRank(card.rank);

@@ -241,7 +241,7 @@ public class Prospector : MonoBehaviour {
 				layout.multiplier.x * (layout.drawPile.x + i * dpStagger.x),
 				layout.multiplier.y * (layout.drawPile.y + i * dpStagger.y),
 				-layout.drawPile.layerID + 0.1f * i);
-			cd.faceUp = false; // Make them all face-down
+			cd.faceUp = true; // Make them all face-down
 			cd.state = eCardState.drawpile;
 			// Set depth sorting
 			cd.SetSortingLayerName(layout.drawPile.layerName);
