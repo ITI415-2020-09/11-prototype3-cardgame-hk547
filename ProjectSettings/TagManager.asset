@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Capsule
+  - hourglass
+  - Arrow
+  - Clicked
   layers:
   - Default
   - TransparentFX

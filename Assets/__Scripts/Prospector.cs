@@ -32,6 +32,10 @@ public class Prospector : MonoBehaviour {
 	public List<CardProspector> tableau;
 	public List<CardProspector> discardPile;
 	public FloatingScore fsRun;
+	public Text ClickCount;
+	public Text DPcounter;
+	public int count = 0;
+	public int DPcount = 0;
 
 	void Awake() {
 		S = this;
@@ -70,6 +74,7 @@ public class Prospector : MonoBehaviour {
 	}
 
 	void Start() {
+
 		Scoreboard.S.score = ScoreManager.SCORE;
 
 		deck = GetComponent<Deck>();
@@ -246,6 +251,8 @@ public class Prospector : MonoBehaviour {
 			// Set depth sorting
 			cd.SetSortingLayerName(layout.drawPile.layerName);
 			cd.SetSortOrder(-10 * i);
+			DPcount = drawPile.Count;
+			DPCounting(DPcount);
 		}
 	}
 
@@ -259,6 +266,7 @@ public class Prospector : MonoBehaviour {
 				// Clicking the target card does nothing
 				break;
 			case eCardState.drawpile:
+				ClickCounting(1);
 				// Clicking any card in the drawPile will draw the next card
 				MoveToDiscard(target); // Moves the target to the discardPile
 				MoveToTarget(Draw());  // Moves the next drawn card to the target
@@ -282,6 +290,7 @@ public class Prospector : MonoBehaviour {
 				}
 				if (!validMatch) return; // return if not valid
 										 // If we got here, then: Yay! It's a valid card.
+				ClickCounting(1);
 				tableau.Remove(cd); // Remove it from the tableau List
 				MoveToTarget(cd);   // Make it the target card
 				SetTableauFaces();  // Update tableau card face-ups
@@ -433,5 +442,17 @@ public class Prospector : MonoBehaviour {
 				break;
 		}
 	}
+	public void ClickCounting(int num)
+	{
+		count += num;
+		string counts = count.ToString(); ;
+		ClickCount.text = counts;
+	}
 
+	public void DPCounting(int dp)
+	{
+		int dpcountt = dp;
+		string dpcounts = dpcountt.ToString(); ;
+		DPcounter.text = dpcounts;
+	}
 }
