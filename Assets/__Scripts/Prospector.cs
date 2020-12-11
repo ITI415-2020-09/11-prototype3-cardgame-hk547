@@ -37,6 +37,8 @@ public class Prospector : MonoBehaviour {
 	public int count = 0;
 	public int DPcount = 0;
 
+	//public GameObject[] arrow = GameObject.FindGameObjectsWithTag("Arrow");
+
 	void Awake() {
 		S = this;
 		SetUpUITexts();
@@ -74,6 +76,8 @@ public class Prospector : MonoBehaviour {
 	}
 
 	void Start() {
+
+		//arrow.GameObject.SetActive(true);
 
 		Scoreboard.S.score = ScoreManager.SCORE;
 
