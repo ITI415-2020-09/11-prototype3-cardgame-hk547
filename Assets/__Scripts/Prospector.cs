@@ -39,6 +39,11 @@ public class Prospector : MonoBehaviour {
 
 	//public GameObject[] arrow = GameObject.FindGameObjectsWithTag("Arrow");
 
+	//GameObject obj1 = GameObject.Find("Name"); 
+	//GameObject obj2 = GameObject.FindWithTag("Tag"); 
+	//GameObject obj3 = GameObject.FindObjectsWithTag("Tag");
+
+
 	void Awake() {
 		S = this;
 		SetUpUITexts();
